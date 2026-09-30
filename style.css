@@ -7,29 +7,59 @@
 
 * { box-sizing: border-box; }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
+  padding: 0;
+
   overflow: hidden;
+
   background: #d9ceb8;
 }
 
-body { font-family: "Manrope", Arial, sans-serif; color: var(--ink); }
-.hand { font-family: "Marck Script", "Comic Sans MS", cursive; }
+body {
+  position: relative;
+  font-family: "Manrope", Arial, sans-serif;
+}
 
 #stage {
-  position: absolute;
+  --stage-scale: 1;
+
+  position: fixed;
+
   left: 50%;
   top: 50%;
+
   width: 1600px;
   height: 900px;
+
   overflow: hidden;
+
+  transform:
+    translate(-50%, -50%)
+    scale(var(--stage-scale));
+
   transform-origin: center center;
+
   background:
-    radial-gradient(ellipse at 50% 51%, rgba(255,255,255,.54), transparent 54%),
-    linear-gradient(135deg, #f5eddd 0%, #eee1c9 48%, #f5ecda 100%);
-  box-shadow: 0 26px 70px rgba(45, 34, 20, .23);
+    radial-gradient(
+      ellipse at 50% 51%,
+      rgba(255, 255, 255, .54),
+      transparent 54%
+    ),
+    linear-gradient(
+      135deg,
+      #f5eddd 0%,
+      #eee1c9 48%,
+      #f5ecda 100%
+    );
+
+  box-shadow:
+    0 26px 70px
+    rgba(45, 34, 20, .23);
+
   isolation: isolate;
 }
 

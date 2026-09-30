@@ -66,10 +66,10 @@ body { font-family: "Manrope", Arial, sans-serif; color: var(--ink); }
 .tw { position: relative; display: inline-block; padding: 0 90px 22px 4px; }
 h1 {
   margin: 0;
-  font-size: 67px;
-  line-height: .91;
-  font-weight: 400;
-  letter-spacing: .2px;
+  font-size: 74px;
+  line-height: .98;
+  font-weight: 800;
+  letter-spacing: -2.2px;
   transform: rotate(-1.3deg);
 }
 h1 span { display: block; }

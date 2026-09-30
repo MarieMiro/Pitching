@@ -35,7 +35,29 @@ const view = document.getElementById('view');
 const cuckooClock = document.getElementById('hg');
 const flash = document.getElementById('flash');
 const sandCanvas = document.getElementById('sand');
-const btn = document.getElementById('btn');
+const slide2 = document.getElementById('slide2');
+const backBtn = document.getElementById('backBtn');
+const nextBtn = document.getElementById('btn');
+
+nextBtn.onclick = () => {
+  if (mode !== 'play') return;
+
+  rewind();
+
+  setTimeout(() => {
+    slide2.classList.add('active');
+  }, 750);
+};
+
+backBtn.onclick = () => {
+  slide2.classList.remove('active');
+
+  flash.classList.add('on');
+
+  setTimeout(() => {
+    flash.classList.remove('on');
+  }, 170);
+};
 
 let takeIndex = 0;
 let mode = 'play';

@@ -37,6 +37,7 @@ const flash = document.getElementById('flash');
 const sandCanvas = document.getElementById('sand');
 const slide2 = document.getElementById('slide2');
 const backBtn = document.getElementById('backBtn');
+const backBtn = document.getElementById('backBtn');
 const nextBtn = document.getElementById('btn');
 
 nextBtn.onclick = () => {
@@ -48,6 +49,31 @@ nextBtn.onclick = () => {
     slide2.classList.add('active');
   }, 750);
 };
+
+backBtn.onclick = () => {
+  slide2.classList.remove('active');
+
+  view.classList.add('glitch');
+  flash.classList.add('on');
+  hg.classList.toggle('flip');
+
+  setTimeout(() => {
+    flash.classList.remove('on');
+  }, 100);
+
+  setTimeout(() => {
+    view.classList.remove('glitch');
+
+    seconds = 0;
+    takeIndex = 0;
+    timer = 0;
+
+    showTake();
+  }, 800);
+};
+
+
+
 
 backBtn.onclick = () => {
   slide2.classList.remove('active');

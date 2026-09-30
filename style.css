@@ -694,5 +694,40 @@ ore {
   }
 }:bef
 
+#backBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 30;
+
+  padding: 11px 25px;
+
+  border: 1px solid rgba(78, 24, 35, .3);
+  border-radius: 30px;
+
+  color: #fff;
+  background: #4e1823;
+
+  font: 700 16px "Manrope", Arial, sans-serif;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(78, 24, 35, .22);
+
+  transform: translateX(-50%);
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+#backBtn:hover {
+  background: #702b39;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+
+
+
+
 
 

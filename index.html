@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Идеальное знакомство — питч-слайд</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage" aria-label="Питч-слайд фильма «Идеальное знакомство»">
+    <div class="paper-grain" aria-hidden="true"></div>
+    <canvas id="sand" width="3200" height="1800" aria-hidden="true"></canvas>
+
+    <section class="top">
+      <div class="left">
+        <div class="tw">
+          <h1 class="hand"><span>Идеальное</span><span>знакомство</span></h1>
+          <svg class="ul" viewBox="0 0 520 30" aria-hidden="true"><path d="M4 22 C120 8 300 4 500 12" fill="none" stroke="#1f3552" stroke-width="7" stroke-linecap="round"/></svg>
+          <svg class="heart" width="54" height="64" viewBox="0 0 60 70" aria-hidden="true"><path d="M30 60 C6 40 2 20 16 12 C24 8 30 16 30 22 C34 10 52 6 56 20 C58 34 44 48 30 60Z" fill="none" stroke="#1f3552" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+
+        <div class="rows">
+          <div class="row" style="animation-delay:1.9s"><span class="lab hand"><i>Жанр:</i></span><span class="val">ромком</span></div>
+          <div class="row" style="animation-delay:2.2s"><span class="lab hand"><i>Тема:</i></span><span class="val">перфекционизм и страх ошибки</span></div>
+          <div class="row concept" style="animation-delay:2.5s"><span class="lab hand"><i>Хай-концепт:</i></span><span class="val">герой получает возможность с помощью часов-кукушки перематывать время</span>
+            <svg id="hg" width="56" height="82" viewBox="0 0 70 100" fill="none" stroke="#1f3552" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M10 6H60M10 94H60M14 6C14 34 34 40 35 50C34 60 14 66 14 94M56 6C56 34 36 40 35 50C36 60 56 66 56 94"/><path d="M22 18H48L35 44Z" fill="#c9b48a" stroke="none"/><path d="M20 90C26 74 44 74 50 90Z" fill="#c9b48a" stroke="none"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="note hand">Иногда, чтобы всё получилось, нужно всё переделать…</div>
+        <div class="bubble hand">Логлайн:</div>
+        <div id="log" aria-label="Логлайн"></div>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div class="refs-area">
+        <div class="refl hand">Референсы:</div>
+        <div class="refs">
+          <figure>
+            <div class="card" id="c1" style="--tilt:-2deg;animation-delay:3.2s"><div class="art"><img src="images/groundhog.jpg" alt="Референс: День сурка" loading="eager"></div></div>
+            <figcaption class="cap hand" style="animation-delay:3.9s">«День сурка» (1993)</figcaption>
+          </figure>
+          <figure>
+            <div class="card" id="c2" style="--tilt:1.5deg;animation-delay:3.4s"><div class="art"><img src="images/signs.jpg" alt="Референс: короткометражка Знаки" loading="eager"></div></div>
+            <figcaption class="cap hand" style="animation-delay:4.1s">(короткий метр) «Знаки» (2008)</figcaption>
+          </figure>
+          <figure>
+            <div class="card" id="c3" style="--tilt:-1deg;animation-delay:3.6s"><div class="art"><img src="images/good-day.jpg" alt="Референс: Один хороший день" loading="eager"></div></div>
+            <figcaption class="cap hand" style="animation-delay:4.3s">(рус.) «Один хороший день» (2024)</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="sep" aria-hidden="true"></div>
+
+      <div class="rwbox">
+        <div id="view" aria-label="Кадры неудачных попыток знакомства">
+          <img id="scene" src="images/take1.jpg" alt="Неудачная попытка знакомства в кафе">
+          <div class="scene-wash" aria-hidden="true"></div>
+          <div class="scan" aria-hidden="true"></div>
+          <div class="hud"><span id="rec">● REC</span><span id="tc">00:00:00</span></div>
+          <div id="rw">ку-ку! ◀◀ ПЕРЕМОТКА</div>
+        </div>
+        <div class="hand" id="take">Дубль 01 · Идеальный план</div>
+      </div>
+    </section>
+
+    <button id="btn" type="button">⟲ отмотать время <span>(пробел)</span></button>
+    <div id="flash" aria-hidden="true"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

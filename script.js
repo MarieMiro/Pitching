@@ -1,17 +1,43 @@
 const stage = document.getElementById('stage');
 
 function fit() {
+  const stageWidth = 1600;
+  const stageHeight = 900;
+
+  const horizontalScale =
+    window.innerWidth / stageWidth;
+
+  const verticalScale =
+    window.innerHeight / stageHeight;
+
   const scale = Math.min(
-    innerWidth / 1600,
-    innerHeight / 900
+    horizontalScale,
+    verticalScale
   );
 
-  stage.style.transform =
-    `translate(-50%, -50%) scale(${scale})`;
+  stage.style.setProperty(
+    '--stage-scale',
+    scale
+  );
 }
 
-addEventListener('resize', fit);
+window.addEventListener(
+  'resize',
+  fit
+);
+
+window.addEventListener(
+  'orientationchange',
+  fit
+);
+
 fit();
+
+
+
+
+
+
 
 /* =====================================================
    ЛОГЛАЙН

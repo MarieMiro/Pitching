@@ -9,11 +9,11 @@ fit();
 
 const LOG = 'Неуверенный парень пытается познакомиться с понравившейся девушкой в кафе, однако считает, что сможет понравиться ей, только если их знакомство будет идеальным. После провальной первой попытки герой получает шанс отматывать время назад с помощью часов-кукушки и знакомиться с ней снова и снова, но его неловкость и внешние обстоятельства раз за разом портят «первое» впечатление.';
 const log = document.getElementById('log');
-LOG.split(' ').forEach((word, index) => {
+LOG.split(' ').forEach((word, i) => {
   const span = document.createElement('span');
   span.className = 'w';
-  span.style.animationDelay = `${2.4 + index * 0.055}s`;
-  span.textContent = `${word}\u00a0`;
+  span.style.animationDelay = (2.4 + i * 0.055) + 's';
+  span.textContent = word + ' ';
   log.appendChild(span);
 });
 
